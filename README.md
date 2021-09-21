@@ -1,2 +1,2 @@
-# mark10-CashRegisterMgr
+# mark10 Cash Register Manager
  
