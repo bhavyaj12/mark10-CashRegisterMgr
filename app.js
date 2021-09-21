@@ -22,7 +22,7 @@ nextButton.addEventListener("click", function validate() {
         afterNext.style.display = "flex";        
         
     } else {
-        showMsg("Invalid Bill Amount, cannot be negative or zero");
+        showMsg("Invalid Bill Amount, cannot be negative or zero or string");
     }
 });
 
@@ -30,17 +30,17 @@ checkButton.addEventListener("click", function validateInput() {
     table.style.display = "none";
     msg.style.display = "none";
 
-    if(billAmnt.value > 0) {
+    if(billAmnt.value > 0 && cashGiven.value > 0) {
         
-        if(cashGiven.value > 0 && (cashGiven.value >= billAmnt.value)) {
+        if(cashGiven.value >= billAmnt.value) {
             const returnAmt = cashGiven.value - billAmnt.value;
             calculateChange(returnAmt);
         } else {
-            showMsg("Invalid Cash Given, must be equal to or more than Bill Amount and cannot be negative or zero");
+            showMsg("Invalid Cash Given, must be equal to or more than Bill Amount");
         }
 
     } else {
-        showMsg("Invalid Bill Amount, cannot be negative or zero");
+        showMsg("Invalid Cash Given, cannot be negative or zero");
     }
 });
 
