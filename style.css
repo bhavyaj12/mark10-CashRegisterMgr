@@ -2,7 +2,7 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.container {
+.container, .after-next {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -10,3 +10,6 @@
     padding: 2rem;
     text-align: center;
 }
+
+   
+   

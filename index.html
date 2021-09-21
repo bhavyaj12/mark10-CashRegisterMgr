@@ -18,17 +18,28 @@
         </p>
         <label for="bill-amt">Bill Amount:</label>
         <input id="bill-amt" type="text"  />
-        
+        <button id="next-btn">NEXT</button>
+    </div>
+
+    <div class="after-next">
         <label for="cash-given">Cash Given:</label>
         <input id="cash-given" type="text"  />
         <button id="chk-btn">CHECK</button>
+    </div>
 
+    <div class="container">
         <p id="error-msg"></p>
         <table class="change-tbl">
             <caption>Change to be Returned</caption>
             <tr>
                 <th>No of Notes</th>
-                <td></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
+                <td class="num-notes"></td>
             </tr>
             <tr>
                 <th>Note</th>
@@ -41,8 +52,8 @@
                 <td>1</td>
             </tr>
         </table>
-        
+    
     </div>
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
