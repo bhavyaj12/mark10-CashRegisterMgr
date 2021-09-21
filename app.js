@@ -18,7 +18,7 @@ nextButton.addEventListener("click", function validate() {
     afterNext.style.display = "none";
     msg.style.display = "none";
 
-    if(billAmnt.value > 0) {
+    if(Number(billAmnt.value) > 0) {
         afterNext.style.display = "flex";        
         
     } else {
@@ -30,12 +30,16 @@ checkButton.addEventListener("click", function validateInput() {
     table.style.display = "none";
     msg.style.display = "none";
 
-    if(billAmnt.value > 0 && cashGiven.value > 0) {
+    if(Number(billAmnt.value) > 0 && Number(cashGiven.value) > 0) {
         
-        if(cashGiven.value >= billAmnt.value) {
-            const returnAmt = cashGiven.value - billAmnt.value;
+        if(Number(cashGiven.value) > Number(billAmnt.value)) {
+            const returnAmt = Number(cashGiven.value) - Number(billAmnt.value);
             calculateChange(returnAmt);
-        } else {
+        } else if(Number(cashGiven.value) == Number(billAmnt.value)) {
+            showMsg("No change is needed to be returned");
+        }
+        
+        else {
             showMsg("Invalid Cash Given, must be equal to or more than Bill Amount");
         }
 
