@@ -57,5 +57,7 @@ function calculateChange(returnAmt) {
 
 function showMsg(message) {
     msg.style.display = "block";
+    msg.style.color = "#E11D48";
+    msg.style.fontSize = "1.1rem";
     msg.innerText = message;
 }
